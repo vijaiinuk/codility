@@ -10,7 +10,7 @@ import static org.junit.Assert.assertEquals;
  */
 public class ArrayPairFinderTest {
 
-    ArrayPairFinder arrayPairFinder;
+    private ArrayPairFinder arrayPairFinder;
 
     @Before
     public void setup()  {
