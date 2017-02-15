@@ -28,7 +28,6 @@ public class ArrayPairFinder {
             start = i;
         }
 
-        System.out.println(pairMap);
         for(int i : pairMap.values())  {
             pairCount += (i+1) * i/2;
         }
