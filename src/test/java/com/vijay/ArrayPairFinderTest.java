@@ -1,5 +1,6 @@
 package com.vijay;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -9,11 +10,20 @@ import static org.junit.Assert.assertEquals;
  */
 public class ArrayPairFinderTest {
 
+    ArrayPairFinder arrayPairFinder;
+
+    @Before
+    public void setup()  {
+        arrayPairFinder = new ArrayPairFinder();
+    }
 
     @Test
-    public void testInitial()  {
+    public void testInitial_with_invalid_inputs()  {
+        assertEquals(0, arrayPairFinder.findPairs(null));
+    }
 
-        ArrayPairFinder arrayPairFinder = new ArrayPairFinder();
+    @Test
+    public void testPair_with_valid_inputs()  {
 
         assertEquals(0, arrayPairFinder.findPairs(new int[]{1,2,3}));
 
@@ -24,6 +34,5 @@ public class ArrayPairFinderTest {
         assertEquals(3, arrayPairFinder.findPairs(new int[]{1,2,3,3,2,1,0}));
 
     }
-
 
 }
